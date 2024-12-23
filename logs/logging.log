@@ -162,3 +162,154 @@ Source-Age: 171
 
 ]
 [2024-12-23 14:46:04,200: INFO: main: >>> stage Data Ingestion Stage completed <<<]
+[2024-12-23 15:35:53,177: INFO: main: >>> stage Data Ingestion Stage started <<<]
+[2024-12-23 15:35:53,179: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-12-23 15:35:53,179: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-12-23 15:35:53,180: ERROR: main: while scanning a simple key
+  in "schema.yaml", line 15, column 3
+could not find expected ':'
+  in "schema.yaml", line 16, column 9]
+Traceback (most recent call last):
+  File "/home/deepak/Desktop/projcts/MLops_projects/Datascience_Project_1/main.py", line 9, in <module>
+    obj.initiate_data_ingestion()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/deepak/Desktop/projcts/MLops_projects/Datascience_Project_1/src/Datascience_1/pipeline/data_ingestion_pipeline.py", line 12, in initiate_data_ingestion
+    config = ConfigurationManager()
+  File "/home/deepak/Desktop/projcts/MLops_projects/Datascience_Project_1/src/Datascience_1/config/configuration.py", line 13, in __init__
+    self.schema = read_yaml(schema_filepath)
+                  ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/deepak/anaconda3/envs/mlops/lib/python3.13/site-packages/ensure/main.py", line 872, in __call__
+    return_val = self.f(*args, **kwargs)
+  File "/home/deepak/Desktop/projcts/MLops_projects/Datascience_Project_1/src/Datascience_1/utils/common.py", line 22, in read_yaml
+    raise e
+  File "/home/deepak/Desktop/projcts/MLops_projects/Datascience_Project_1/src/Datascience_1/utils/common.py", line 16, in read_yaml
+    content = yaml.safe_load(yaml_file)
+  File "/home/deepak/anaconda3/envs/mlops/lib/python3.13/site-packages/yaml/__init__.py", line 125, in safe_load
+    return load(stream, SafeLoader)
+  File "/home/deepak/anaconda3/envs/mlops/lib/python3.13/site-packages/yaml/__init__.py", line 81, in load
+    return loader.get_single_data()
+           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/deepak/anaconda3/envs/mlops/lib/python3.13/site-packages/yaml/constructor.py", line 49, in get_single_data
+    node = self.get_single_node()
+  File "/home/deepak/anaconda3/envs/mlops/lib/python3.13/site-packages/yaml/composer.py", line 36, in get_single_node
+    document = self.compose_document()
+  File "/home/deepak/anaconda3/envs/mlops/lib/python3.13/site-packages/yaml/composer.py", line 55, in compose_document
+    node = self.compose_node(None, None)
+  File "/home/deepak/anaconda3/envs/mlops/lib/python3.13/site-packages/yaml/composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+  File "/home/deepak/anaconda3/envs/mlops/lib/python3.13/site-packages/yaml/composer.py", line 133, in compose_mapping_node
+    item_value = self.compose_node(node, item_key)
+  File "/home/deepak/anaconda3/envs/mlops/lib/python3.13/site-packages/yaml/composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+  File "/home/deepak/anaconda3/envs/mlops/lib/python3.13/site-packages/yaml/composer.py", line 127, in compose_mapping_node
+    while not self.check_event(MappingEndEvent):
+              ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/deepak/anaconda3/envs/mlops/lib/python3.13/site-packages/yaml/parser.py", line 98, in check_event
+    self.current_event = self.state()
+                         ~~~~~~~~~~^^
+  File "/home/deepak/anaconda3/envs/mlops/lib/python3.13/site-packages/yaml/parser.py", line 428, in parse_block_mapping_key
+    if self.check_token(KeyToken):
+       ~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/deepak/anaconda3/envs/mlops/lib/python3.13/site-packages/yaml/scanner.py", line 115, in check_token
+    while self.need_more_tokens():
+          ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/deepak/anaconda3/envs/mlops/lib/python3.13/site-packages/yaml/scanner.py", line 152, in need_more_tokens
+    self.stale_possible_simple_keys()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/deepak/anaconda3/envs/mlops/lib/python3.13/site-packages/yaml/scanner.py", line 291, in stale_possible_simple_keys
+    raise ScannerError("while scanning a simple key", key.mark,
+            "could not find expected ':'", self.get_mark())
+yaml.scanner.ScannerError: while scanning a simple key
+  in "schema.yaml", line 15, column 3
+could not find expected ':'
+  in "schema.yaml", line 16, column 9
+[2024-12-23 15:36:24,329: INFO: main: >>> stage Data Ingestion Stage started <<<]
+[2024-12-23 15:36:24,330: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-12-23 15:36:24,330: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-12-23 15:36:24,331: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-12-23 15:36:24,332: INFO: common: Created directory at: artifacts]
+[2024-12-23 15:36:24,332: INFO: common: Created directory at: artifacts/data_ingestion]
+[2024-12-23 15:36:24,332: INFO: data_ingestion: File already exists]
+[2024-12-23 15:36:24,333: INFO: main: >>> stage Data Ingestion Stage completed <<<]
+[2024-12-23 15:36:24,333: INFO: main: >>> stage Data Validation Stage started <<<]
+[2024-12-23 15:36:24,334: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-12-23 15:36:24,334: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-12-23 15:36:24,335: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-12-23 15:36:24,336: INFO: common: Created directory at: artifacts]
+[2024-12-23 15:36:24,336: INFO: common: Created directory at: artifacts/data_validation]
+[2024-12-23 15:36:24,353: ERROR: main: "'ConfigBox' object has no attribute 'key'"]
+Traceback (most recent call last):
+  File "box/box.py", line 593, in box.box.Box.__getitem__
+KeyError: 'key'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/box.py", line 632, in box.box.Box.__getattr__
+  File "box/box.py", line 620, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'key'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 634, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'key'. Did you mean: 'keys'?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/config_box.py", line 29, in box.config_box.ConfigBox.__getattr__
+  File "box/box.py", line 648, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'key'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 593, in box.box.Box.__getitem__
+KeyError: 'key'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/box.py", line 632, in box.box.Box.__getattr__
+  File "box/box.py", line 620, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'key'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 634, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'key'. Did you mean: 'keys'?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/deepak/Desktop/projcts/MLops_projects/Datascience_Project_1/main.py", line 19, in <module>
+    obj.initiate_data_validation()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/deepak/Desktop/projcts/MLops_projects/Datascience_Project_1/src/Datascience_1/pipeline/data_validation_pipeline.py", line 15, in initiate_data_validation
+    data_validation.validate_all_columns()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/deepak/Desktop/projcts/MLops_projects/Datascience_Project_1/src/Datascience_1/components/data_validation.py", line 33, in validate_all_columns
+    raise e
+  File "/home/deepak/Desktop/projcts/MLops_projects/Datascience_Project_1/src/Datascience_1/components/data_validation.py", line 19, in validate_all_columns
+    all_schema = self.config.all_schema.key()
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "box/config_box.py", line 31, in box.config_box.ConfigBox.__getattr__
+  File "box/box.py", line 648, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'key'". Did you mean: 'keys'?
+[2024-12-23 15:36:59,958: INFO: main: >>> stage Data Ingestion Stage started <<<]
+[2024-12-23 15:36:59,959: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-12-23 15:36:59,960: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-12-23 15:36:59,961: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-12-23 15:36:59,961: INFO: common: Created directory at: artifacts]
+[2024-12-23 15:36:59,961: INFO: common: Created directory at: artifacts/data_ingestion]
+[2024-12-23 15:36:59,961: INFO: data_ingestion: File already exists]
+[2024-12-23 15:36:59,962: INFO: main: >>> stage Data Ingestion Stage completed <<<]
+[2024-12-23 15:36:59,962: INFO: main: >>> stage Data Validation Stage started <<<]
+[2024-12-23 15:36:59,963: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-12-23 15:36:59,963: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-12-23 15:36:59,965: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-12-23 15:36:59,965: INFO: common: Created directory at: artifacts]
+[2024-12-23 15:36:59,965: INFO: common: Created directory at: artifacts/data_validation]
+[2024-12-23 15:36:59,972: INFO: main: >>> stage Data Validation Stage completed <<<]
